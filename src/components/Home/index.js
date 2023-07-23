@@ -47,15 +47,15 @@ class Home extends Component {
     const {isLoading} = this.state
     return (
       <div className="bg-container">
+        <div className="logo-ipl-container">
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png"
+            alt="ipl logo"
+            className="ipl-logo"
+          />
+          <h1 className="main-heading">IPL Dashboard</h1>
+        </div>
         <div className="team-card-details-container">
-          <div className="logo-ipl-container">
-            <img
-              src="https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png"
-              alt="ipl logo"
-              className="ipl-logo"
-            />
-            <h1 className="main-heading">IPL Dashboard</h1>
-          </div>
           {isLoading ? this.renderLoader() : this.renderTeamCardDetails()}
         </div>
       </div>
